@@ -103,6 +103,12 @@
             layers = <0 1 2 3>;
             timeout-ms = <50>;
         };
+        from_game_layer {
+            bindings = <&to 0>;
+            key-positions = <0 1 2 3>;
+            layers = <4>;
+            timeout-ms = <50>;
+        };
     };
     /**/
     macros {
