@@ -143,7 +143,7 @@ keymap {
           &kp IT_Q       &kp IT_W       &kp IT_E        &kp IT_R        &kp IT_T         &kp IT_Y    &kp IT_U   &kp IT_I      &kp IT_O    &kp IT_P
           &hm LCTRL IT_A &hm LSHFT IT_S &hm LMETA IT_D  &hm LALT IT_F   &kp IT_G         &kp IT_H    &kp IT_J   &kp IT_K      &kp IT_L      &kp IT_APOS
  &kp ESC  &kp IT_Z       &kp IT_X       &kp IT_C        &kp IT_V        &kp IT_B         &kp IT_N    &kp IT_M   &kp IT_COMMA  &kp IT_DOT  &kp IT_MINUS  &kp IT_DLLR
-                          &kp LSHFT  	&mo 1        &kp IT_SPACE    &kp BSPC      &mo 2    &mo 3
+                          &kp LSHFT  	&mo 1        &kp SPACE    &kp BSPC   &mo 2    &mo 3
         >; 
     };
     num_layer {
@@ -153,7 +153,7 @@ keymap {
            &trans  &trans &trans &trans &trans &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
            &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
                    &trans &trans &trans                &trans &trans &trans
-        >;
+        >
     };
     sym_layer {
         label = "SYM";
