@@ -178,9 +178,9 @@ keymap {
         label = "GAME";
         bindings = <
             &kp IT_N1     &kp IT_N2  &kp IT_N3    &kp IT_N4     &kp IT_N5       &trans  &trans  &trans  &trans  &trans
-            &kp IT_LSHFT  &kp IT_A   &kp IT_W     &kp IT_D      &kp IT_F        &trans  &trans  &trans  &trans  &trans
-            &none  &kp IT_LCTRL  &none   &kp IT_S     &kp IT_C      &none        &trans  &trans  &trans  &trans  &trans  &to 0
-                          &kp IT_LALT  &kp IT_SPACE  &kp IT_SPACE    &trans  &trans  &trans
+            &kp LSHFT  &kp IT_A   &kp IT_W     &kp IT_D      &kp IT_F        &trans  &trans  &trans  &trans  &trans
+            &none  &kp LCTRL  &none   &kp IT_S     &kp IT_C      &none        &trans  &trans  &trans  &trans  &trans  &to 0
+                          &kp LALT  &kp SPACE  &kp SPACE    &trans  &trans  &trans
         >;
     };
 };
