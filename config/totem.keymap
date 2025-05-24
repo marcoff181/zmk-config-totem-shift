@@ -140,7 +140,7 @@
     /*         label = "REGION_CAPTURE2"; */
     /*     }; */
     };
-    /**/
+    /*commento*/
 keymap {
     compatible = "zmk,keymap";
     base_layer {
