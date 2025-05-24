@@ -23,8 +23,6 @@
 #define SYM   2
 #define EXTRA 3
 #define GAME  4
-#define META  5
-#define MOUSE 6
 
 &mt {
     quick-tap-ms = <100>;
@@ -84,6 +82,12 @@
             require-prior-idle-ms = <125>;
             bindings = <&mo>, <&to>;
         };
+        mm_quote: mod_proper_uppercase_quote {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp IT_APOS>, <&kp IT_DQT>;
+            mods = <(MOD_LSFT | MOD_RSFT)>; 
+        };
     };
 
     combos {
@@ -125,26 +129,26 @@ keymap {
         label = "BASE";
         bindings = <
           &kp IT_Q       &kp IT_W       &kp IT_E        &kp IT_R      &kp IT_T         &kp IT_Y    &kp IT_U   &kp IT_I      &kp IT_O    &kp IT_P
-          &hm LCTRL IT_A &hm LSHFT IT_S &hm LMETA IT_D  &hm LALT IT_F &kp IT_G         &kp IT_H    &kp IT_J   &kp IT_K      &kp IT_L    &hm LSHFT IT_APOS
- &kp ESC  &kp IT_Z       &kp IT_X       &kp IT_C        &kp IT_V      &kp IT_B         &kp IT_N    &kp IT_M   &kp IT_COMMA  &kp IT_DOT  &kp IT_MINUS  &kp IT_DLLR
-                          &mo 6  	&mo 1        &kp SPACE    &kp BSPC    &mo 2    &mo 3
+          &hm LCTRL IT_A &hm LSHFT IT_S &hm LMETA IT_D  &hm LALT IT_F &kp IT_G         &kp IT_H    &kp IT_J   &kp IT_K      &kp IT_L    &mm_quote
+ &kp ESC  &kp IT_Z       &kp IT_X       &kp IT_C        &kp IT_V      &kp IT_B         &kp IT_N    &kp IT_M   &kp IT_COMMA  &kp IT_DOT  &kp IT_MINUS  &trans
+                                                 &kp LSHFT  	&mo 1  &kp SPACE         &kp BSPC    &mo 2    &mo 3
         >; 
     };
     num_layer {
         label = "NUM";
         bindings = <
            &kp IT_N1  &kp IT_N2  &kp IT_N3  &kp IT_N4  &kp IT_N5      &kp IT_N6    &kp IT_N7  &kp IT_N8  &kp IT_N9  &kp IT_N0 
-           &trans  &trans &trans &trans &trans &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-           &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
-                   &trans &trans &trans                &trans &trans &trans
+           &trans  &trans &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PP      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
+           &trans &trans &trans &kp C_BRI_DN  &kp C_BRI_UP &trans     &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &trans &trans
+                   &trans &trans &trans                               &trans &trans &trans
         >;
     };
     sym_layer {
         label = "SYM";
         bindings = <
             &kp IT_EXCL &kp IT_QMARK &kp IT_AMPS &kp IT_PIPE  &kp IT_TILDE     &trans   &kp IT_LBRC &kp IT_RBRC  &kp IT_PLUS  &kp IT_PRCNT
-            &kp IT_AT   &trans    &trans   &kp IT_SLASH &trans        &kp IT_HASH &kp IT_LPAR &kp IT_RPAR  &kp IT_EQUAL &kp IT_GRAVE 
-            &kp IT_CARET &trans   &trans    &trans   &kp IT_BSLH  &kp IT_LT        &kp IT_GT   &kp IT_LBKT &kp IT_RBKT  &kp IT_ASTRK &trans    &kp IT_DLLR
+            &kp IT_AT   &kp IT_DLLR    &trans   &kp IT_SLASH &trans        &kp IT_HASH &kp IT_LPAR &kp IT_RPAR  &kp IT_EQUAL &kp IT_GRAVE 
+    &trans  &kp IT_CARET &trans    &trans   &kp IT_BSLH  &kp IT_LT        &kp IT_GT   &kp IT_LBKT &kp IT_RBKT  &kp IT_ASTRK &trans    &trans
                                    &trans   &trans    &trans        &trans   &trans   &trans       
         >;
     };
@@ -154,37 +158,17 @@ keymap {
         bindings = <
             &trans     &trans  &kp IT_E_GRAVE &kp IT_E_ACUTE  &trans     &trans  &kp IT_U_GRAVE &kp IT_I_GRAVE   &kp IT_O_GRAVE     &trans         
         &kp IT_A_GRAVE     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans         
-    &trans  &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans  &trans         
+    &trans  &bt BT_SEL -1 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR &bt BT_CLR_ALL &trans     &trans     &trans     &trans     &trans  &trans         
                                &trans     &trans     &trans     &trans     &trans     &trans
         >;
     };
     game_layer {
         label = "GAME";
         bindings = <
-            &kp IT_N1     &kp IT_N2  &kp IT_N3    &kp IT_N4     &kp IT_N5       &trans  &trans  &trans  &trans  &trans
-            &kp LSHFT  &kp IT_A   &kp IT_W     &kp IT_D      &kp IT_F        &trans  &trans  &trans  &trans  &trans
+            &trans    &kp IT_Q  &kp IT_W    &kp IT_E     &trans       &trans  &trans  &trans  &trans  &trans
+            &kp LSHFT  &kp IT_A   &kp IT_S     &kp IT_D      &trans        &trans  &trans  &trans  &trans  &trans
             &none  &kp LCTRL  &none   &kp IT_S     &kp IT_C      &none        &trans  &trans  &trans  &trans  &trans  &to 0
                           &kp LALT  &kp SPACE  &kp SPACE    &trans  &trans  &trans
         >;
-    };
-    meta_layer {
-            label = "META";
-            bindings = <
-     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &trans  &kp C_BRI_DN  &kp C_BRI_UP  &trans  &trans
-     &trans  &trans &trans &bt BT_CLR &bt BT_CLR_ALL                       &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &transtrans
-     &trans &trans &trans &trans &trans &trans                             &kp C_PP &trans &trans &trans &trans &trans
-             &trans &trans &trans                                          &trans &trans &trans
-            >;
-        };
-    };
-    mouse_layer {
-            label = "MOUSE";
-            bindings = <
-     &trans &trans &trans &trans &trans                                    &trans &trans &trans &trans &trans
-     &trans &trans &trans &trans &trans                                    &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT 
-     &trans &trans &trans &trans &trans &trans                             &trans &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &trans
-             &trans &trans &trans                                          &mkp MB1 &mkp MB2 &mkp MB3 
-            >;
-        };
     };
 };
