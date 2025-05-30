@@ -167,7 +167,6 @@
                             &kp LALT  &kp SPACE  &kp SPACE    &trans  &trans  &trans
           >;
       };
-
       mouse_layer {
           label = "MOUSE";
           bindings = <
