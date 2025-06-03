@@ -124,10 +124,10 @@
       base_layer {
           label = "BASE";
           bindings = <
-            &kp IT_Q       &kp IT_W       &kp IT_E        &kp IT_R      &kp IT_T         &kp IT_Y    &kp IT_U   &kp IT_I      &kp IT_O    &kp IT_P
-            &hm LCTRL IT_A &hm LSHFT IT_S &hm LMETA IT_D  &hm LALT IT_F &kp IT_G         &kp IT_H    &kp IT_J   &kp IT_K      &kp IT_L    &mm_quote
-   &kp ESC  &kp IT_Z       &kp IT_X       &kp IT_C        &kp IT_V      &kp IT_B         &kp IT_N    &kp IT_M   &kp IT_COMMA  &kp IT_DOT  &kp IT_MINUS  &trans
-                                          &kp LSHFT  	    &mo 1         &lt 5 SPACE      &kp BSPC    &mo 2    &mo 3
+            &kp IT_Q       &kp IT_W       &kp IT_E        &kp IT_R      &kp IT_T         &kp IT_Y     &kp IT_U   &kp IT_I      &kp IT_O    &kp IT_P
+            &hm LCTRL IT_A &hm LSHFT IT_S &hm LMETA IT_D  &hm LALT IT_F &kp IT_G         &kp IT_H     &kp IT_J   &kp IT_K      &kp IT_L    &mm_quote
+   &kp ESC  &kp IT_Z       &kp IT_X       &kp IT_C        &kp IT_V      &kp IT_B         &kp IT_N     &kp IT_M   &kp IT_COMMA  &kp IT_DOT  &kp IT_MINUS  &trans
+                                          &trans    	    &mo 1         &lt 5 SPACE    &mt LSHFT BSPC &mo 2    &mo 3
           >; 
       };
       num_layer {
@@ -135,16 +135,16 @@
           bindings = <
              &kp IT_N1  &kp IT_N2  &kp IT_N3  &kp IT_N4  &kp IT_N5      &kp IT_N6    &kp IT_N7  &kp IT_N8  &kp IT_N9  &kp IT_N0 
              &trans  &trans &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PP      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-             &trans &trans &trans &kp C_BRI_DN  &kp C_BRI_UP &trans     &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &trans &trans
-                     &trans &trans &trans                               &trans &trans &trans
+             &trans &trans &trans &kp C_BRI_DN  &kp C_BRI_UP &trans     &kp HOME &kp PG_DN  &kp PG_UP &kp END &trans &trans
+                     &trans &trans &trans                               &trans &trans &trans 
           >;
       };
       sym_layer {
           label = "SYM";
           bindings = <
               &kp IT_EXCL &kp IT_QMARK &kp IT_AMPS &kp IT_PIPE  &kp IT_TILDE     &trans   &kp IT_LBRC &kp IT_RBRC  &kp IT_PLUS  &kp IT_PRCNT
-     &hm LCTRL IT_AT &hm LSHFT IT_DLLR &kp LMETA  &hm LALT IT_SLASH &trans        &kp IT_HASH &kp IT_LPAR &kp IT_RPAR  &kp IT_EQUAL &kp IT_GRAVE 
-      &trans  &kp IT_CARET &trans    &trans   &kp IT_BSLH  &kp IT_LT        &kp IT_GT   &kp IT_LBKT &kp IT_RBKT  &kp IT_ASTRK &trans    &trans
+     &hm LCTRL IT_AT &hm LSHFT IT_DLLR &hm LMETA IT_BSLH &hm LALT IT_SLASH &trans        &kp RA(IT_A_GRAVE) &kp IT_LPAR &kp IT_RPAR  &kp IT_EQUAL &kp IT_GRAVE 
+      &trans  &kp IT_CARET &trans    &kp IT_LT   &kp IT_GT &trans         &trans   &kp IT_LBKT &kp IT_RBKT  &kp IT_ASTRK &trans    &trans
                                      &trans   &trans    &trans        &trans   &trans   &trans       
           >;
       };
