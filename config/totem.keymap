@@ -116,6 +116,12 @@
             layers = <4>;
             timeout-ms = <50>;
         };
+        shift_hold {
+            bindings = <&kp LSHFT>;
+            key-positions = <34 35>;
+            layers = <0 1 2 3>;
+            timeout-ms = <50>;
+        };
     };
     macros {
     };
@@ -124,26 +130,26 @@
       base_layer {
           label = "BASE";
           bindings = <
-            &kp IT_Q       &kp IT_W       &kp IT_E        &kp IT_R      &kp IT_T         &kp IT_Y     &kp IT_U   &kp IT_I      &kp IT_O    &kp IT_P
-            &hm LCTRL IT_A &hm LSHFT IT_S &hm LMETA IT_D  &hm LALT IT_F &kp IT_G         &kp IT_H     &kp IT_J   &kp IT_K      &kp IT_L    &mm_quote
-   &kp ESC  &kp IT_Z       &kp IT_X       &kp IT_C        &kp IT_V      &kp IT_B         &kp IT_N     &kp IT_M   &kp IT_COMMA  &kp IT_DOT  &kp IT_MINUS  &trans
-                                          &trans    	    &mo 1         &lt 5 SPACE    &mt LSHFT BSPC &mo 2    &mo 3
+            &kp IT_Q       &kp IT_W       &kp IT_E        &kp IT_R      &kp IT_T         &kp IT_Y       &kp IT_U   &kp IT_I      &kp IT_O       &kp IT_P
+            &hm LCTRL IT_A &hm LSHFT IT_S &hm LMETA IT_D  &hm LALT IT_F &kp IT_G         &kp IT_H       &kp IT_J   &hm 5 IT_K    &hm RSHFT IT_L &mm_quote
+   &kp ESC  &kp IT_Z       &kp IT_X       &kp IT_C        &kp IT_V      &kp IT_B         &kp IT_N       &kp IT_M   &kp IT_COMMA  &kp IT_DOT     &kp IT_MINUS  &trans
+                                          &trans    	  &trans        &lt 1 SPACE      &mt 2 BSPC     &trans     &mo 3
           >; 
       };
       num_layer {
           label = "NUM";
           bindings = <
-             &kp IT_N1  &kp IT_N2  &kp IT_N3  &kp IT_N4  &kp IT_N5      &kp IT_N6    &kp IT_N7  &kp IT_N8  &kp IT_N9  &kp IT_N0 
-             &trans  &trans &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PP      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-             &trans &trans &trans &kp C_BRI_DN  &kp C_BRI_UP &trans     &kp HOME &kp PG_DN  &kp PG_UP &kp END &trans &trans
-                     &trans &trans &trans                               &trans &trans &trans 
+             &kp IT_N1  &kp IT_N2   &kp IT_N3     &kp IT_N4      &kp IT_N5         &kp IT_N6  &kp IT_N7  &kp IT_N8  &kp IT_N9  &kp IT_N0 
+             &trans     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &kp C_BRI_UP      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp IT_DEAD_GRAVE
+     &trans  &trans     &kp C_PP    &kp C_PREV    &kp C_NEXT     &kp C_BRI_DN      &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp IT_E_ACUTE     &trans
+                                                         &trans &trans &trans      &trans &trans &trans 
           >;
       };
       sym_layer {
           label = "SYM";
           bindings = <
               &kp IT_EXCL &kp IT_QMARK &kp IT_AMPS &kp IT_PIPE  &kp IT_TILDE     &trans   &kp IT_LBRC &kp IT_RBRC  &kp IT_PLUS  &kp IT_PRCNT
-     &hm LCTRL IT_AT &hm LSHFT IT_DLLR &hm LMETA IT_BSLH &hm LALT IT_SLASH &trans        &kp RA(IT_A_GRAVE) &kp IT_LPAR &kp IT_RPAR  &kp IT_EQUAL &kp IT_GRAVE 
+     &hm LCTRL IT_AT &hm LSHFT IT_DLLR &hm LMETA IT_BSLH &hm LALT IT_SLASH &trans         &kp RA(IT_A_GRAVE) &kp IT_LPAR &kp IT_RPAR  &kp IT_EQUAL &kp IT_GRAVE 
       &trans  &kp IT_CARET &trans    &kp IT_LT   &kp IT_GT &trans         &trans   &kp IT_LBKT &kp IT_RBKT  &kp IT_ASTRK &trans    &trans
                                      &trans   &trans    &trans        &trans   &trans   &trans       
           >;
@@ -161,19 +167,19 @@
       game_layer {
           label = "GAME";
           bindings = <
-              &trans    &kp IT_Q  &kp IT_W    &kp IT_E     &trans       &trans  &trans  &trans  &trans  &trans
-              &kp LSHFT  &kp IT_A   &kp IT_S     &kp IT_D      &trans        &trans  &trans  &trans  &trans  &trans
-              &none  &kp LCTRL  &none   &kp IT_S     &kp IT_C      &none        &trans  &trans  &trans  &trans  &trans  &to 0
-                            &kp LALT  &kp SPACE  &kp SPACE    &trans  &trans  &trans
+                     &trans     &kp IT_Q   &kp IT_W     &kp IT_E      &trans        &trans  &trans  &trans  &trans  &trans
+                     &kp LSHFT  &kp IT_A   &kp IT_S     &kp IT_D      &trans        &trans  &trans  &trans  &trans  &trans
+            &kp ESC  &kp LCTRL  &none      &kp IT_S     &kp IT_C      &none         &trans  &trans  &trans  &trans  &trans  &to 0
+                                           &kp LALT     &kp SPACE     &kp SPACE     &trans     &trans  &trans
           >;
       };
       mouse_layer {
           label = "MOUSE";
           bindings = <
-      &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans
-      &trans  &trans  &trans  &trans  &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-      &trans  &trans  &trans  &trans  &trans  &trans       &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT  &trans  &trans
-      &trans  &trans  &trans      &mkp LCLK &mkp RCLK &mkp MCLK   
+      &trans  &msc SCRL_UP  &mmv MOVE_UP  &msc SCRL_DOWN  &trans                         &trans  &trans  &trans  &trans       &trans
+      &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT   &trans  &mkp LCLK  &trans  &mkp RCLK  &trans
+      &trans  &trans  &trans  &trans  &trans  &trans                                     &trans &trans &trans &trans           &trans  &trans
+                              &trans  &trans  &trans                                    &trans &trans &trans   
           >;
       };
   };
