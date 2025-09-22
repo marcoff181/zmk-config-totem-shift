@@ -66,9 +66,9 @@
           label = "BASE";
           bindings = <
             &kp IT_Q       &kp IT_W       &kp IT_E        &kp IT_R      &kp IT_T         &kp IT_Y       &kp IT_U   &kp IT_I      &kp IT_O       &kp IT_P
-            &mt LCTRL IT_A &mt LSHFT IT_S &mt LMETA IT_D  &mt LALT IT_F &kp IT_G         &kp IT_H       &kp IT_J   &kp IT_K      &mt RSHFT IT_L &mm_quote
-   &kp ESC  &kp IT_Z       &kp IT_X       &kp IT_C        &kp IT_V      &kp IT_B         &kp IT_N       &kp IT_M   &kp IT_COMMA  &kp IT_DOT     &kp IT_MINUS  &none 
-                                          &none     	  &mo 5         &lt 1 SPACE      &lt 2 BSPC     &mo 3      &none
+            &mt LCTRL IT_A &mt LSHFT IT_S &mt LMETA IT_D  &mt LALT IT_F &kp IT_G         &kp IT_H       &kp IT_J   &lt 5 IT_K    &mt RSHFT IT_L &mm_quote
+   &kp ESC  &kp IT_Z       &kp IT_X       &kp IT_C        &kp IT_V      &kp IT_B         &kp IT_N       &kp IT_M   &kp IT_COMMA  &kp IT_DOT     &kp IT_MINUS  &mo 3 
+                                          &none     	  &none         &lt 1 SPACE      &lt 2 BSPC     &none      &none
           >; 
       };
       num_layer {
