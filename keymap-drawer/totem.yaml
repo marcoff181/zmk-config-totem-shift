@@ -1,0 +1,248 @@
+layout: {zmk_keyboard: totem}
+layers:
+  BASE:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LCTRL}
+  - {t: S, h: LSHFT}
+  - {t: D, h: LMETA}
+  - {t: F, h: LALT}
+  - G
+  - H
+  - J
+  - {t: K, h: MOUSE}
+  - {t: L, h: RSHFT}
+  - {t: '''', s: '"'}
+  - ESC
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - '-'
+  - EXTRA
+  - ''
+  - ''
+  - {t: SPACE, h: NUM}
+  - {t: BSPC, h: SYM}
+  - ''
+  - ''
+  NUM:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - ''
+  - MUTE
+  - VOL DN
+  - VOL UP
+  - BRI UP
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - DEAD GRAVE
+  - ''
+  - ''
+  - PP
+  - PREV
+  - NEXT
+  - BRI DN
+  - HOME
+  - PG DN
+  - PG UP
+  - END
+  - E ACUTE
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  SYM:
+  - '!'
+  - '?'
+  - '&'
+  - '|'
+  - AltGr+I GRAVE
+  - ''
+  - '{'
+  - '}'
+  - +
+  - '%'
+  - {t: '@', h: LCTRL}
+  - {t: $, h: LSHFT}
+  - {t: \, h: LMETA}
+  - {t: /, h: LALT}
+  - ''
+  - AltGr+A GRAVE
+  - (
+  - )
+  - '='
+  - AltGr+'
+  - ''
+  - ^
+  - ''
+  - <
+  - '>'
+  - ''
+  - ''
+  - '['
+  - ']'
+  - '*'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  EXTRA:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - BT CLR
+  - BT CLR ALL
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  GAME:
+  - ''
+  - Q
+  - W
+  - E
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LSHFT
+  - A
+  - S
+  - D
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ESC
+  - LCTRL
+  - ''
+  - S
+  - C
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BASE, h: toggle}
+  - LALT
+  - SPACE
+  - SPACE
+  - BASE
+  - NUM
+  - SYM
+  MOUSE:
+  - ''
+  - ''
+  - '&mmv MOVE_UP'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LCTRL
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - ''
+  - ''
+  - '&mkp LCLK'
+  - {type: held}
+  - '&mkp RCLK'
+  - ''
+  - ''
+  - ''
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_UP'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_RIGHT'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+combos:
+- p: [16, 17]
+  k: ENTER
+- p: [12, 13]
+  k: TAB
+  l: [BASE, NUM, SYM, EXTRA]
+- p: [4, 5]
+  k: {t: GAME, h: toggle}
+  l: [BASE, NUM, SYM, EXTRA]
+- p: [11, 18]
+  k: '&caps_word'
+  l: [BASE, NUM, SYM, EXTRA]
