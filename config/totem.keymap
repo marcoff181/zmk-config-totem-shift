@@ -3,13 +3,17 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/pointing.h>
+#ifndef KEYMAP_DRAWER
 #include "keys_it_142.h"
+#endif
 
 #define BASE  0
 #define NUM   1
 #define SYM   2
 #define EXTRA 3
 #define GAME  4
+#define MOUSE 5
 
 &mt {
     quick-tap-ms = <100>;
@@ -30,13 +34,12 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_enter {
+        enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17>;
             timeout-ms = <50>;
-            layers = <0 1 2 3>;
         };
-        combo_tab {
+        tab {
             bindings = <&kp TAB>;
             key-positions = <12 13>;
             timeout-ms = <50>;
@@ -44,89 +47,18 @@
         };
         to_game_layer {
             bindings = <&to 4>;
-            key-positions = <0 1 2 3>;
+            key-positions = <4 5>;
+            layers = <0 1 2 3>;
+            timeout-ms = <50>;
+        };
+        caps_word{
+            bindings = <&caps_word>;
+            key-positions = <11 18>;
             layers = <0 1 2 3>;
             timeout-ms = <50>;
         };
     };
-    /**/
     macros {
-    /*     capture_region: capture_region { */
-    /*         compatible = "zmk,behavior-macro"; */
-    /*         #binding-cells = <0>; */
-    /*         bindings = */
-    /*             <&macro_press>, */
-    /*             <&kp LCTRL>, */
-    /*             <&macro_tap>, */
-    /*             <&kp PRINTSCREEN>, */
-    /*             <&macro_release>, */
-    /*             <&kp LCTRL>; */
-    /**/
-    /*         label = "CAPTURE_REGION"; */
-    /*     }; */
-    /**/
-    /*     region_capture2: region_capture2 { */
-    /*         compatible = "zmk,behavior-macro"; */
-    /*         #binding-cells = <0>; */
-    /*         bindings = */
-    /*             <&macro_press>, */
-    /*             <&kp RCTRL>, */
-    /*             <&macro_tap>, */
-    /*             <&kp K_APP>, */
-    /*             <&macro_release>, */
-    /*             <&kp RCTRL>; */
-    /**/
-    /*         label = "REGION_CAPTURE2"; */
-    /*     }; */
-    };
-    /**/
-keymap {
-    compatible = "zmk,keymap";
-    base_layer {
-        label = "BASE";
-        bindings = <
-          &kp IT_Q       &kp IT_W       &kp IT_E        &kp IT_R        &kp IT_T         &kp IT_Y    &kp IT_U   &kp IT_I      &kp IT_O    &kp IT_P
-          &hm LCTRL IT_A &hm LSHFT IT_S &hm LMETA IT_D  &hm LALT IT_F   &kp IT_G         &kp IT_H    &kp IT_J   &kp IT_K      &kp IT_L      &kp IT_APOS
- &kp ESC  &kp IT_Z       &kp IT_X       &kp IT_C        &kp IT_V        &kp IT_B         &kp IT_N    &kp IT_M   &kp IT_COMMA  &kp IT_DOT  &kp IT_MINUS  &kp IT_DLLR
-                          &kp LSHFT  	&mo 1        &kp IT_SPACE    &kp BSPC      &mo 2    &mo 3
-        >; 
-    };
-    num_layer {
-        label = "NUM";
-        bindings = <
-           &kp IT_N1  &kp IT_N2  &kp IT_N3  &kp IT_N4  &kp IT_N5      &kp IT_N6    &kp IT_N7  &kp IT_N8  &kp IT_N9  &kp IT_N0 
-           &trans  &trans &trans &trans &trans &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-           &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
-                   &trans &trans &trans                &trans &trans &trans
-        >;
-    };
-    sym_layer {
-        label = "SYM";
-        bindings = <
-            &kp IT_EXCL &kp IT_QMARK &kp IT_AMPS &kp IT_PIPE  &kp IT_TILDE     &trans   &kp IT_LBRC &kp IT_RBRC  &kp IT_PLUS  &kp IT_PRCNT
-            &kp IT_AT   &trans    &trans   &kp IT_SLASH &trans        &kp IT_HASH &kp IT_LPAR &kp IT_RPAR  &kp IT_EQUAL &kp IT_GRAVE 
-            &kp IT_CARET &trans   &trans    &trans   &kp IT_BSLH  &kp IT_LT        &kp IT_GT   &kp IT_LBKT &kp IT_RBKT  &kp IT_ASTRK &trans    &kp IT_DLLR
-                                   &trans   &trans    &trans        &trans   &trans   &trans       
-        >;
-    };
-
-    function_layer {
-        label = "EXTRA";
-        bindings = <
-            &trans     &trans  &kp IT_E_GRAVE &kp IT_E_ACUTE  &trans     &trans  &kp IT_U_GRAVE &kp IT_I_GRAVE   &kp IT_O_GRAVE     &trans         
-        &kp IT_A_GRAVE     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans         
-    &trans  &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans  &trans         
-                               &trans     &trans     &trans     &trans     &trans     &trans
-        >;
-    };
-    game_layer {
-        label = "GAME";
-        bindings = <
-            &kp IT_N1     &kp IT_N2  &kp IT_N3    &kp IT_N4     &kp IT_N5       &trans  &trans  &trans  &trans  &trans
-            &kp LSHFT  &kp IT_A   &kp IT_W     &kp IT_D      &kp IT_F        &trans  &trans  &trans  &trans  &trans
-            &none  &kp LCTRL  &none   &kp IT_S     &kp IT_C      &none        &trans  &trans  &trans  &trans  &trans  &to 0
-                          &kp LALT  &kp SPACE  &kp SPACE    &trans  &trans  &trans
-        >;
     };
   keymap {
       compatible = "zmk,keymap";
@@ -186,5 +118,4 @@ keymap {
           >;
       };
   };
-};
 };
