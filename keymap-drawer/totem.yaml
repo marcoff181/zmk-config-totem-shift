@@ -18,7 +18,7 @@ layers:
   - G
   - H
   - J
-  - K
+  - {t: K, h: MOUSE}
   - {t: L, h: RSHFT}
   - {t: '''', s: '"'}
   - ESC
@@ -32,12 +32,12 @@ layers:
   - ','
   - .
   - '-'
+  - EXTRA
   - ''
   - ''
-  - MOUSE
   - {t: SPACE, h: NUM}
   - {t: BSPC, h: SYM}
-  - EXTRA
+  - ''
   - ''
   NUM:
   - '1'
@@ -149,12 +149,12 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   GAME:
   - ''
@@ -213,7 +213,7 @@ layers:
   - ''
   - ''
   - '&mkp LCLK'
-  - ''
+  - {type: held}
   - '&mkp RCLK'
   - ''
   - ''
@@ -229,7 +229,7 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
+  - ''
   - ''
   - ''
   - ''
