@@ -1,35 +1,30 @@
+# My ZMK config for the TOTEM-SHIFT split keyboard
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="keymap-drawer/totem.svg">
   <source media="(prefers-color-scheme: light)" srcset="keymap-drawer/totem.svg">
-  <img alt="TOTEM logo font" src="/docs/images/TOTEM_logo_bright.svg">
+  <img alt="keymap">
 </picture>
 
-<h1 align="center">T O T E M - S H I F T</h1>
+My personal keymap, which includes:
 
-# ZMK CONFIG FOR THE TOTEM-SHIFT SPLIT KEYBOARD
+- Home row mods
+- Mouse emulation
+- Combos for Enter/Tab
+- Caps words
+- Avoids usage of inner thumbs for comfort
+- Support for accented vowels with composition:  ``` ` + e = è```
+- Volume, Media, Brightness and Bluetooth controls
 
-[Here](https://github.com/Endracion/TOTEM-SHIFT) you can find my updated TOTEM-SHIFT hardware files.\
-[Here](https://github.com/GEIGEIGEIST/totem) you can find the original hardware files and build guide.
 
-TOTEM-SHIFT is a modified 38 keys column-staggered split keyboard originally by GEIGEIGEIST running [ZMK](https://zmk.dev/). It's meant to be used with a SEEED XIAO BLE.
+## What is the TOTEM-SHIFT?
+TOTEM-SHIFT is a modified 38 keys column-staggered split keyboard [originally created by GEIGEIGEIST](https://github.com/GEIGEIGEIST/totem) and then modified by [Endracion](https://github.com/Endracion/), running [ZMK](https://zmk.dev/). It's meant to be used with a SEEED XIAO BLE. [Here](https://github.com/Endracion/TOTEM-SHIFT) are the updated TOTEM-SHIFT hardware files.
 
 It includes these additional projects:
 - caksoylar's [RGB LED Widget](https://github.com/caksoylar/zmk-rgbled-widget)
 - carrefinho's [Prospector Dongle along with tokyo2006's nice!nano v2 compatibility](https://github.com/tokyo2006/prospector-zmk-module/tree/support_nicenano)
 
-![TOTEM layout](/docs/images/TOTEM_layout.svg)
 
-## Nice!Nano IO connect list:
-
-| nice_nano_v2.overlay | Display | 
-| :------------------- | :------ |
-| SPIM_SCK | SCL |
-| SPIM_MOSI | SDA |
-| cmd-data-gpios | DC |
-| reset-gpios | RES |
-
-
-## HOW TO USE
+## Usage
 
 - fork this repo
 - `git clone` your repo, to create a local copy on your PC (you can use the [command line](https://www.atlassian.com/git/tutorials) or [github desktop](https://desktop.github.com/))
