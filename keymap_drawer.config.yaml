@@ -1,5 +1,3 @@
-parse_config:
-  zmk_remove_keycode_prefix: ["IT_"]
 draw_config:
   dark_mode: true
   n_columns: 2
