@@ -20,7 +20,7 @@ layers:
   - J
   - {t: K, h: MOUSE}
   - {t: L, h: RSHFT}
-  - {t: '''', s: '"'}
+  - QUOTE
   - ESC
   - Z
   - X
@@ -59,7 +59,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - DEAD GRAVE
+  - AltGr+`
   - ''
   - ''
   - PP
@@ -70,7 +70,7 @@ layers:
   - PG DN
   - PG UP
   - END
-  - E ACUTE
+  - ''
   - ''
   - ''
   - ''
@@ -83,7 +83,7 @@ layers:
   - '?'
   - '&'
   - '|'
-  - AltGr+I GRAVE
+  - '~'
   - ''
   - '{'
   - '}'
@@ -92,13 +92,13 @@ layers:
   - {t: '@', h: LCTRL}
   - {t: $, h: LSHFT}
   - {t: \, h: LMETA}
-  - {t: /, h: LALT}
+  - {t: ISLASH, h: LALT}
   - ''
-  - AltGr+A GRAVE
+  - '#'
   - (
   - )
   - '='
-  - AltGr+'
+  - '`'
   - ''
   - ^
   - ''
@@ -157,11 +157,11 @@ layers:
   - ''
   - ''
   GAME:
-  - ''
+  - TAB
   - Q
   - W
   - E
-  - ''
+  - R
   - ''
   - ''
   - ''
@@ -171,7 +171,7 @@ layers:
   - A
   - S
   - D
-  - ''
+  - F
   - ''
   - ''
   - ''
@@ -179,10 +179,10 @@ layers:
   - ''
   - ESC
   - LCTRL
-  - ''
-  - S
+  - Z
+  - X
   - C
-  - ''
+  - V
   - ''
   - ''
   - ''
