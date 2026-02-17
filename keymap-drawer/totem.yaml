@@ -20,7 +20,7 @@ layers:
   - J
   - {t: K, h: MOUSE}
   - {t: L, h: RSHFT}
-  - QUOTE
+  - ''''
   - ESC
   - Z
   - X
@@ -92,7 +92,7 @@ layers:
   - {t: '@', h: LCTRL}
   - {t: $, h: LSHFT}
   - {t: \, h: LMETA}
-  - {t: ISLASH, h: LALT}
+  - {t: /, h: LALT}
   - ''
   - '#'
   - (
