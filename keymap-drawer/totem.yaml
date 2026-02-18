@@ -29,8 +29,8 @@ layers:
   - B
   - N
   - M
-  - ','
-  - .
+  - '&comma_s'
+  - '&dot_s'
   - '-'
   - EXTRA
   - ''
