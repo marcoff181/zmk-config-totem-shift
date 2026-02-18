@@ -23,14 +23,14 @@
 
 / {
     behaviors {
-        comma_semi: comma_s {
+        comma_s : comma_semi  {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        dot_colon: dot_s {
+        dot_s : dot_colon{
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp COLON>;
