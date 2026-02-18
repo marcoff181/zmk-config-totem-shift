@@ -22,6 +22,21 @@
 };
 
 / {
+    behaviors {
+        comma_semi: comma_s {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot_colon: dot_s {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
     combos {
         compatible = "zmk,combos";
         enter {
@@ -36,7 +51,7 @@
             layers = <0 1 2 3>;
         };
         to_game_layer {
-            bindings = <&to 4>;
+                bindings = <&to 4>;
             key-positions = <4 5>;
             layers = <0 1 2 3>;
             timeout-ms = <50>;
@@ -55,9 +70,9 @@
       base_layer {
           label = "BASE";
           bindings = <
-        &kp Q       &kp W       &kp E       &kp R      &kp T          &kp Y      &kp U &kp I     &kp O       &kp P
-        &mt LCTRL A &mt LSHFT S &mt LMETA D &mt LALT F &kp G          &kp H      &kp J &lt 5 K   &mt RSHFT L &kp APOS
-&kp ESC &kp Z       &kp X       &kp C       &kp V      &kp B          &kp N      &kp M &kp COMMA &kp DOT     &kp MINUS  &mo 3
+        &kp Q       &kp W       &kp E       &kp R      &kp T          &kp Y      &kp U &kp I    &kp O       &kp P
+        &mt LCTRL A &mt LSHFT S &mt LMETA D &mt LALT F &kp G          &kp H      &kp J &lt 5 K  &mt RSHFT L &kp APOS
+&kp ESC &kp Z       &kp X       &kp C       &kp V      &kp B          &kp N      &kp M &comma_s &dot_s      &kp MINUS  &mo 3
                                 &none       &none      &lt 1 SPACE    &lt 2 BSPC &none &none
           >; 
       };
@@ -73,10 +88,10 @@
       sym_layer {
           label = "SYM";
           bindings = <
-      &kp EXCL     &kp QMARK      &kp AMPS       &kp PIPE        &kp TILDE    &none    &kp LBRC &kp RBRC  &kp PLUS  &kp PRCNT
+      &kp EXCL     &kp QMARK      &kp AMPS       &kp PIPE       &kp TILDE    &none    &kp LBRC &kp RBRC  &kp PLUS  &kp PRCNT
       &mt LCTRL AT &mt LSHFT DLLR &mt LMETA BSLH &mt LALT SLASH &none        &kp HASH &kp LPAR &kp RPAR  &kp EQUAL &kp GRAVE
-&none &kp CARET    &none          &kp LT         &kp GT          &none        &none    &kp LBKT &kp RBKT  &kp ASTRK &none     &none 
-                                  &none          &none           &none        &none    &none    &none        
+&none &kp CARET    &none          &kp LT         &kp GT         &none        &none    &kp LBKT &kp RBKT  &kp ASTRK &none     &none 
+                                  &none          &none          &none        &none    &none    &none        
           >;
       };
 
@@ -101,10 +116,10 @@
       mouse_layer {
           label = "MOUSE";
           bindings = <
-        &none     &none            &mmv MOVE_UP    &none            &none             &none   &none     &none   &none        &none 
-        &kp LCTRL &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none             &none   &mkp LCLK &none   &mkp RCLK    &none 
-&none   &none     &msc SCRL_LEFT   &msc SCRL_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT   &none   &none     &none   &none        &none   &none 
-                                   &none           &none            &none             &none   &none     &none    
+        &none     &none          &mmv MOVE_UP   &none           &none              &none &none     &none &none     &none 
+        &kp LCTRL &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none              &none &mkp LCLK &none &mkp RCLK &none 
+&none   &none     &msc SCRL_LEFT &msc SCRL_UP   &msc SCRL_DOWN  &msc SCRL_RIGHT    &none &none     &none &none     &none &none 
+                                 &none          &none           &none              &none &none     &none    
           >;
       };
   };
